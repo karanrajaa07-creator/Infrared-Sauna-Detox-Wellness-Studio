@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memberships &amp; Pricing | Aura &amp; Solace Infrared Wellness Sanctuary</title>
+  <meta name="description" content="Discover flexible session packs and monthly memberships with rollover sessions, guest passes, and member discounts.">
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-rtl.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-xl aura-navbar sticky-top">
+    <div class="container-fluid px-xl-4 px-lg-3 px-3" style="max-width: 1440px;">
+      <a class="navbar-brand aura-brand" href="index.html">
+        <span class="aura-brand-icon"><i class="bi bi-sun-fill"></i></span>
+        <span>Aura &amp; Solace</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link aura-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down small ms-1"></i>
+            </a>
+            <ul class="dropdown-menu aura-dropdown-menu shadow-lg border-0">
+              <li>
+                <a class="dropdown-item py-2" href="index.html">
+                  <i class="bi bi-sun text-warning me-2"></i>Home 1 - Classic Sanctuary
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-2" href="home-2.html">
+                  <i class="bi bi-snow text-info me-2"></i>Home 2 - Contrast &amp; Vitality
+                  <span class="badge bg-warning text-dark ms-2" style="font-size:0.65rem;">New</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link active" href="memberships.html">Memberships</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="aura-nav-actions d-flex align-items-center gap-2 flex-nowrap ms-xl-3 flex-shrink-0">
+          <div class="aura-header-controls me-1">
+            <button type="button" class="btn-aura-control btn-theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+              <i class="bi bi-moon-stars-fill theme-icon-indicator"></i>
+            </button>
+            <button type="button" class="btn-aura-control btn-dir-toggle" id="dir-toggle-btn" aria-label="Toggle RTL/LTR" title="Switch text direction (LTR / RTL)">
+              <i class="bi bi-arrow-left-right small me-1"></i>
+              <span class="dir-pill-switch">LTR</span>
+            </button>
+          </div>
+
+          <div id="navbar-auth-container" class="d-flex align-items-center gap-2 flex-nowrap">
+            <a href="login.html" class="btn btn-aura-secondary"><i class="bi bi-person"></i> Client Login</a>
+            <a href="book.html" class="btn btn-aura-primary d-none d-sm-inline-flex">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="py-5" style="background: linear-gradient(135deg, #1C1F23 0%, #121416 100%); color: #FAF7F2;">
+    <div class="container py-4 text-center">
+      <span class="aura-badge badge-amber mb-3">Transparent Investment</span>
+      <h1 class="font-serif display-4 fw-bold text-white mb-3">Memberships &amp; Pricing</h1>
+      <p class="page-header-subtitle fs-5 max-w-lg mx-auto mb-0" style="max-width: 650px; color: #F5F5F5;">
+        Prioritize consistent recovery. Enjoy rollover credits, guest privileges, and exclusive studio discounts with no long-term contracts.
+      </p>
+    </div>
+  </header>
+
+  <!-- Active User Membership Status Bar (Rendered if Logged In) -->
+  <section id="user-membership-status-section" class="py-3 bg-white border-bottom d-none">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 p-3 rounded-4 bg-amber-subtle border border-warning">
+        <div class="d-flex align-items-center gap-3">
+          <div class="rounded-circle bg-warning text-dark d-flex align-items-center justify-content-center" style="width: 44px; height: 44px; font-size: 1.25rem;">
+            <i class="bi bi-gem"></i>
+          </div>
+          <div>
+            <div class="fw-bold text-dark fs-5" id="user-plan-name">Active Membership</div>
+            <div class="small text-muted" id="user-plan-details">Remaining: 0 sessions • Renews: -</div>
+          </div>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="dashboard.html#membership" class="btn btn-sm btn-outline-dark rounded-pill">Manage in Dashboard</a>
+          <a href="book.html" class="btn btn-sm btn-aura-primary rounded-pill">Book a Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section -->
+  <section class="section-padding bg-light">
+    <div class="container">
+
+      <!-- Plan Category Toggle Filters -->
+      <div class="text-center mb-5">
+        <div class="btn-group p-1 bg-white rounded-pill shadow-sm border" role="group">
+          <button type="button" class="btn btn-sm rounded-pill px-4 active fw-bold plan-filter-btn" data-category="all">All Options</button>
+          <button type="button" class="btn btn-sm rounded-pill px-4 text-muted plan-filter-btn" data-category="monthly">Monthly Memberships</button>
+          <button type="button" class="btn btn-sm rounded-pill px-4 text-muted plan-filter-btn" data-category="package">Multi-Packs</button>
+          <button type="button" class="btn btn-sm rounded-pill px-4 text-muted plan-filter-btn" data-category="single">Single Passes</button>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-stretch" id="pricing-cards-container">
+        <!-- Rendered via JS and HTML structure -->
+
+        <!-- Tier 1: Single Session -->
+        <div class="col-md-6 col-lg-3 plan-card-col" data-cat="single">
+          <div class="pricing-card">
+            <span class="aura-badge badge-amber mb-2">Single Visit</span>
+            <h4 class="fw-bold mb-1">Single Session Pass</h4>
+            <p class="text-muted small">No commitment drop-in</p>
+            <div class="pricing-amount">$45 <span class="pricing-period">/ session</span></div>
+            <div class="small text-muted mb-3"><i class="bi bi-clock-history me-1"></i> Valid for 30 days</div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle"></i> 1 Full-Spectrum Infrared or Red Light</li>
+              <li><i class="bi bi-check2-circle"></i> Private Canadian cedar cabin</li>
+              <li><i class="bi bi-check2-circle"></i> Organic towel &amp; robe service</li>
+              <li><i class="bi bi-check2-circle"></i> Private rainfall shower access</li>
+              <li><i class="bi bi-check2-circle"></i> Filtered electrolyte hydration</li>
+            </ul>
+            <button class="btn btn-aura-secondary w-100 mt-auto purchase-plan-btn" data-plan="single-session">
+              Purchase Pass
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 2: 5-Session Pack -->
+        <div class="col-md-6 col-lg-3 plan-card-col" data-cat="package">
+          <div class="pricing-card">
+            <span class="aura-badge badge-eucalyptus mb-2">Multi-Session</span>
+            <h4 class="fw-bold mb-1">5-Session Pack</h4>
+            <p class="text-muted small">Save $30 vs single passes</p>
+            <div class="pricing-amount">$195 <span class="pricing-period">/ bundle</span></div>
+            <div class="small text-muted mb-3"><i class="bi bi-clock-history me-1"></i> Valid for 90 days</div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle"></i> 5 Any-Service Sanctuary Sessions</li>
+              <li><i class="bi bi-check2-circle"></i> Shareable with 1 friend or partner</li>
+              <li><i class="bi bi-check2-circle"></i> 14-day advance booking window</li>
+              <li><i class="bi bi-check2-circle"></i> Complimentary organic botanical elixirs</li>
+              <li><i class="bi bi-check2-circle"></i> Full private shower &amp; towel service</li>
+            </ul>
+            <button class="btn btn-aura-secondary w-100 mt-auto purchase-plan-btn" data-plan="multi-5-pack">
+              Purchase 5-Pack
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 3: Detox Glow Monthly (Most Popular) -->
+        <div class="col-md-6 col-lg-3 plan-card-col" data-cat="monthly">
+          <div class="pricing-card popular">
+            <div class="popular-ribbon">Most Popular</div>
+            <span class="aura-badge badge-amber mb-2">Monthly Routine</span>
+            <h4 class="fw-bold mb-1">Detox Glow</h4>
+            <p class="text-muted small">Weekly restorative habit</p>
+            <div class="pricing-amount text-warning">$139 <span class="pricing-period">/ month</span></div>
+            <div class="small text-muted mb-3"><i class="bi bi-arrow-repeat me-1"></i> Renews monthly (Cancel anytime)</div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle text-warning"></i> <strong>4 Sessions per Month</strong> ($34.75/ea)</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> <strong>Rollover unused sessions</strong> (up to 2 mo)</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> 1 Free Red Light add-on / month</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> 15% off boutique apothecary items</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> 1 Guest pass every quarter</li>
+            </ul>
+            <button class="btn btn-aura-primary w-100 mt-auto purchase-plan-btn" data-plan="detox-glow-monthly">
+              Activate Glow Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- Tier 4: Sanctuary VIP Unlimited -->
+        <div class="col-md-6 col-lg-3 plan-card-col" data-cat="monthly">
+          <div class="pricing-card">
+            <span class="aura-badge badge-dark mb-2">VIP Access</span>
+            <h4 class="fw-bold mb-1">Sanctuary VIP</h4>
+            <p class="text-muted small">Daily restorative recovery</p>
+            <div class="pricing-amount">$249 <span class="pricing-period">/ month</span></div>
+            <div class="small text-muted mb-3"><i class="bi bi-arrow-repeat me-1"></i> Unlimited (1 session / day)</div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle"></i> <strong>Unlimited Infrared &amp; Red Light</strong></li>
+              <li><i class="bi bi-check2-circle"></i> Priority booking on VIP private suites</li>
+              <li><i class="bi bi-check2-circle"></i> SO Sound acoustic resonance access</li>
+              <li><i class="bi bi-check2-circle"></i> 2 Free Guest passes every month</li>
+              <li><i class="bi bi-check2-circle"></i> 20% off boutique items &amp; add-ons</li>
+            </ul>
+            <button class="btn btn-aura-secondary w-100 mt-auto purchase-plan-btn" data-plan="sanctuary-vip-unlimited">
+              Activate VIP Plan
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Membership Policy & Transparency Callout -->
+      <div class="mt-5 p-4 rounded-4 bg-white border shadow-sm">
+        <h5 class="fw-bold text-dark mb-3"><i class="bi bi-shield-check text-warning me-2"></i> Our Membership Commitment</h5>
+        <div class="row g-4 text-secondary small">
+          <div class="col-md-4">
+            <strong class="text-dark d-block mb-1">No Long-Term Contracts</strong>
+            Memberships are billed monthly and can be paused or cancelled at any time with 7 days' advance notice before renewal.
+          </div>
+          <div class="col-md-4">
+            <strong class="text-dark d-block mb-1">Session Rollovers</strong>
+            Life gets busy. Any unused sessions on monthly memberships roll over automatically for up to 60 days.
+          </div>
+          <div class="col-md-4">
+            <strong class="text-dark d-block mb-1">Sharing &amp; Guest Passes</strong>
+            Multi-packs can be shared with an authorized family member, and monthly memberships include guest passes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Purchase Flow Modal -->
+  <div class="modal fade" id="purchaseMembershipModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow-lg">
+        <div class="modal-header bg-dark text-white border-0 py-3">
+          <h5 class="modal-title font-serif">
+            <i class="bi bi-gem text-warning me-2"></i> Confirm Plan Selection
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-4">
+            <span class="aura-badge badge-amber mb-2" id="modal-plan-badge">Plan</span>
+            <h3 class="font-serif fw-bold text-dark mb-1" id="modal-plan-title">Plan Name</h3>
+            <div class="display-6 fw-bold text-warning mb-1" id="modal-plan-price">$0.00</div>
+            <p class="text-muted small" id="modal-plan-billing">Billing detail</p>
+          </div>
+
+          <div class="bg-light p-3 rounded-3 mb-4 border">
+            <h6 class="fw-bold text-dark small mb-2">Included Benefits:</h6>
+            <ul class="list-unstyled small text-muted mb-0" id="modal-plan-features">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <div id="modal-auth-warning" class="alert alert-warning small d-none">
+            <i class="bi bi-info-circle me-1"></i> You must be signed in to connect this membership to your account.
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-aura-primary btn-lg" id="modal-confirm-purchase-btn">
+              Confirm &amp; Activate Plan
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="aura-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="aura-brand-icon"><i class="bi bi-sun-fill"></i></span>
+            <span class="footer-brand-title mb-0">Aura &amp; Solace</span>
+          </div>
+          <p class="text-secondary small mb-3">
+            A boutique thermal wellness sanctuary dedicated to cellular rejuvenation, gentle detoxification, and sensory restoration through full-spectrum infrared saunas and medical photobiomodulation.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Pinterest" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe on YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Col 2: Quick Links -->
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Sanctuary</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Contrast)</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="memberships.html" class="footer-link">Memberships &amp; Pricing</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="about.html" class="footer-link">About Studio</a></li>
+            <li><a href="book.html" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Directions &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Therapies</h6>
+          <ul class="list-unstyled">
+            <li><a href="services.html#infrared" class="footer-link">Infrared Sauna Cabin</a></li>
+            <li><a href="services.html#redlight" class="footer-link">Red Light Photobiomodulation</a></li>
+            <li><a href="services.html#synergy" class="footer-link">Sauna + Red Light Combo</a></li>
+            <li><a href="services.html#private" class="footer-link">VIP Sanctuary Suite</a></li>
+            <li><a href="faq.html#prep" class="footer-link">Pre-Session Protocol</a></li>
+            <li><a href="login.html" class="footer-link">Client Account Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Contact -->
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Wellness Journal</h6>
+          <p class="text-secondary small mb-3">Subscribe for evidence-conscious wellness notes, member perks, and seasonal offers.</p>
+          <form class="newsletter-form">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control" placeholder="Your email address" required autocomplete="email">
+              <button class="btn btn-aura-primary" type="submit" aria-label="Subscribe to Journal">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="footer-privacy-notice"><i class="bi bi-shield-check me-1 text-warning"></i> We respect your privacy. Unsubscribe at any time.</div>
+          </form>
+
+          <div class="mt-3 small text-secondary">
+            <div><i class="bi bi-geo-alt me-2 text-warning"></i> 960 S Westlake Blvd, Suite 100, Westlake Village, CA 91361</div>
+            <div class="mt-1"><i class="bi bi-telephone me-2 text-warning"></i> (555) 234-8901</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal & Medical Disclaimer -->
+      <div class="medical-disclaimer-box text-start">
+        <strong class="text-white">Studio Health Disclaimer:</strong> Infrared sauna and photobiomodulation therapies are designed to support general relaxation, comfort, and well-being. They are not intended to diagnose, treat, cure, or prevent any illness or disease. Individuals who are pregnant, have cardiovascular implants, or take heat-sensitive medications should consult their medical provider before use.
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>&copy; 2026 Aura &amp; Solace Wellness Studio. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-sm-0">
+          <a href="privacy.html" class="text-muted small">Privacy Policy</a>
+          <a href="terms.html" class="text-muted small">Terms of Service</a>
+          <a href="login.html?admin=1" class="text-muted small">Staff Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let activePlans = [];
+    let authenticatedUser = null;
+    let selectedPlanObj = null;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await checkCurrentMembership();
+      await loadPlans();
+      setupCategoryFilters();
+      setupPurchaseButtons();
+    });
+
+    async function checkCurrentMembership() {
+      try {
+        const authData = await API.getMe();
+        if (authData && authData.authenticated) {
+          authenticatedUser = authData.user;
+          if (authData.membership && authData.membership.status === 'active') {
+            const m = authData.membership;
+            const remaining = m.session_limit - m.sessions_used;
+            document.getElementById('user-membership-status-section').classList.remove('d-none');
+            document.getElementById('user-plan-name').textContent = m.plan_name;
+            document.getElementById('user-plan-details').textContent = 
+              `Active Plan • ${remaining} of ${m.session_limit} sessions remaining • Valid until ${m.end_date}`;
+          }
+        }
+      } catch (e) {
+        console.warn(e);
+      }
+    }
+
+    async function loadPlans() {
+      try {
+        const data = await API.getMembershipPlans();
+        activePlans = data.plans || [];
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function setupCategoryFilters() {
+      const filterBtns = document.querySelectorAll('.plan-filter-btn');
+      const cards = document.querySelectorAll('.plan-card-col');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'fw-bold');
+            b.classList.add('text-muted');
+          });
+          btn.classList.add('active', 'fw-bold');
+          btn.classList.remove('text-muted');
+
+          const cat = btn.dataset.category;
+          cards.forEach(card => {
+            if (cat === 'all' || card.dataset.cat === cat) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    function setupPurchaseButtons() {
+      document.querySelectorAll('.purchase-plan-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const planId = btn.dataset.plan;
+          const plan = activePlans.find(p => p.id === planId);
+          if (!plan) return;
+          selectedPlanObj = plan;
+          openPurchaseModal(plan);
+        });
+      });
+    }
+
+    function openPurchaseModal(plan) {
+      document.getElementById('modal-plan-title').textContent = plan.name;
+      document.getElementById('modal-plan-price').textContent = `$${plan.price.toFixed(2)}`;
+      document.getElementById('modal-plan-billing').textContent = plan.billing === 'monthly' ? 'Billed monthly • Pause or cancel anytime' : `One-time purchase • Valid for ${plan.validity_days} days`;
+      document.getElementById('modal-plan-badge').textContent = plan.category.toUpperCase();
+
+      const featuresList = document.getElementById('modal-plan-features');
+      featuresList.innerHTML = plan.features.map(f => `<li class="mb-1"><i class="bi bi-check2 text-warning me-2"></i>${f}</li>`).join('');
+
+      const authWarning = document.getElementById('modal-auth-warning');
+      const confirmBtn = document.getElementById('modal-confirm-purchase-btn');
+
+      if (!authenticatedUser) {
+        authWarning.classList.remove('d-none');
+        confirmBtn.textContent = 'Sign In to Purchase Plan';
+        confirmBtn.onclick = () => {
+          window.location.href = `/login.html?redirect=${encodeURIComponent(window.location.pathname)}`;
+        };
+      } else {
+        authWarning.classList.add('d-none');
+        confirmBtn.textContent = `Confirm & Activate (${plan.name})`;
+        confirmBtn.onclick = async () => {
+          confirmBtn.disabled = true;
+          confirmBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Activating...`;
+          try {
+            await API.purchaseMembership(plan.id);
+            Toast.success(`${plan.name} successfully activated!`);
+            const modalEl = document.getElementById('purchaseMembershipModal');
+            bootstrap.Modal.getInstance(modalEl).hide();
+            setTimeout(() => {
+              window.location.href = '/dashboard.html#membership';
+            }, 800);
+          } catch (err) {
+            Toast.error(err.message || "Failed to process membership.");
+            confirmBtn.disabled = false;
+            confirmBtn.textContent = `Confirm & Activate (${plan.name})`;
+          }
+        };
+      }
+
+      const modalEl = document.getElementById('purchaseMembershipModal');
+      const bsModal = new bootstrap.Modal(modalEl);
+      bsModal.show();
+    }
+  </script>
+</body>
+</html>
