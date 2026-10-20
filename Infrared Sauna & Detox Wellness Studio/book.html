@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Session | Aura &amp; Solace Infrared Wellness Sanctuary</title>
+  <meta name="description" content="Reserve your private Canadian cedar infrared sauna or red light therapy session online. View real-time availability and receive instant confirmation.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-rtl.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-xl aura-navbar sticky-top">
+    <div class="container-fluid px-xl-4 px-lg-3 px-3" style="max-width: 1440px;">
+      <a class="navbar-brand aura-brand" href="index.html">
+        <span class="aura-brand-icon"><i class="bi bi-sun-fill"></i></span>
+        <span>Aura &amp; Solace</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link aura-nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down small ms-1"></i>
+            </a>
+            <ul class="dropdown-menu aura-dropdown-menu shadow-lg border-0">
+              <li>
+                <a class="dropdown-item py-2" href="index.html">
+                  <i class="bi bi-sun text-warning me-2"></i>Home 1 - Classic Sanctuary
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-2" href="home-2.html">
+                  <i class="bi bi-snow text-info me-2"></i>Home 2 - Contrast &amp; Vitality
+                  <span class="badge bg-warning text-dark ms-2" style="font-size:0.65rem;">New</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="memberships.html">Memberships</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link aura-nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="aura-nav-actions d-flex align-items-center gap-2 flex-nowrap ms-xl-3 flex-shrink-0">
+          <div class="aura-header-controls me-1">
+            <button type="button" class="btn-aura-control btn-theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+              <i class="bi bi-moon-stars-fill theme-icon-indicator"></i>
+            </button>
+            <button type="button" class="btn-aura-control btn-dir-toggle" id="dir-toggle-btn" aria-label="Toggle RTL/LTR" title="Switch text direction (LTR / RTL)">
+              <i class="bi bi-arrow-left-right small me-1"></i>
+              <span class="dir-pill-switch">LTR</span>
+            </button>
+          </div>
+
+          <div id="navbar-auth-container" class="d-flex align-items-center gap-2 flex-nowrap">
+            <a href="login.html" class="btn btn-aura-secondary"><i class="bi bi-person"></i> Client Login</a>
+            <a href="book.html" class="btn btn-aura-primary d-none d-sm-inline-flex active">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="py-5" style="background: linear-gradient(135deg, #1C1F23 0%, #121416 100%); color: #FAF7F2;">
+    <div class="container py-3 text-center">
+      <span class="aura-badge badge-amber mb-3">Live Booking Concierge</span>
+      <h1 class="font-serif display-4 fw-bold text-white mb-2">Reserve Your Sanctuary Session</h1>
+      <p class="text-secondary fs-5 max-w-lg mx-auto mb-0" style="max-width: 650px;">
+        Choose your therapy, select your preferred date, and secure your private suite in real time.
+      </p>
+    </div>
+  </header>
+
+  <!-- 4. Interactive Booking Engine Section -->
+  <section class="section-padding bg-light">
+    <div class="container">
+
+      <!-- Active Membership Benefit Alert (Auto-populated if logged in) -->
+      <div id="membership-benefit-alert" class="alert alert-success d-none mb-4 shadow-sm rounded-4 border-success">
+        <!-- Injected via js/booking.js -->
+      </div>
+
+      <form id="appointment-booking-form">
+        <div class="row g-4">
+
+          <!-- Left Column: Step 1 (Service) & Step 2 (Date/Slot) -->
+          <div class="col-lg-8">
+            
+            <!-- STEP 1: Select Service -->
+            <div class="booking-calendar-wrapper mb-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;">1</span>
+                <h4 class="font-serif fw-bold text-dark mb-0">Select Sanctuary Therapy</h4>
+              </div>
+              <p class="text-muted small mb-4">Each option includes a private Canadian cedar cabin, towels, rainfall shower, and filtered water.</p>
+
+              <!-- Dynamic Services Container -->
+              <div class="row g-3" id="booking-services-container">
+                <div class="col-12 text-center py-3 text-muted">
+                  <div class="spinner-border spinner-border-sm text-warning me-2" role="status"></div> Loading services...
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2: Select Date & Time Slot -->
+            <div class="booking-calendar-wrapper mb-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;">2</span>
+                <h4 class="font-serif fw-bold text-dark mb-0">Choose Date &amp; Available Time Slot</h4>
+              </div>
+
+              <!-- Date Picker Input -->
+              <div class="row align-items-center mb-4">
+                <div class="col-md-6">
+                  <label for="booking-date-input" class="form-label fw-bold small text-dark">Appointment Date</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-calendar-event text-warning"></i></span>
+                    <input type="date" id="booking-date-input" class="form-control border-start-0 py-2" required>
+                  </div>
+                  <div class="form-text small text-muted">We schedule appointments up to 30 days in advance.</div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                  <div class="d-flex gap-2 justify-content-md-end small">
+                    <span class="d-flex align-items-center gap-1"><span class="badge bg-amber-light text-dark border">●</span> Available</span>
+                    <span class="d-flex align-items-center gap-1"><span class="badge bg-secondary text-white">●</span> Reserved</span>
+                    <span class="d-flex align-items-center gap-1"><span class="badge bg-warning text-dark">●</span> Selected</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slots Grid -->
+              <div>
+                <label class="form-label fw-bold small text-dark mb-2">Available Time Slots for Selected Date</label>
+                <div id="slots-loading" class="text-center py-4 d-none">
+                  <div class="spinner-border text-warning" role="status"></div>
+                  <div class="small text-muted mt-2">Checking real-time slot availability...</div>
+                </div>
+                <div class="slot-grid" id="time-slots-container">
+                  <!-- Injected via js/booking.js -->
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: Client Information -->
+            <div class="booking-calendar-wrapper">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <span class="badge bg-warning text-dark rounded-circle p-2 fs-6" style="width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center;">3</span>
+                <h4 class="font-serif fw-bold text-dark mb-0">Client Contact &amp; Preferences</h4>
+              </div>
+              <p class="text-muted small mb-4">Enter your details for appointment reminders and your private digital confirmation.</p>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="client-name" class="form-label small fw-bold">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" id="client-name" class="form-control py-2" placeholder="e.g. Emma Watson" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="client-email" class="form-label small fw-bold">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" id="client-email" class="form-control py-2" placeholder="e.g. emma@example.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="client-phone" class="form-label small fw-bold">Phone Number <span class="text-danger">*</span> <span class="text-muted fw-normal">(Numbers only)</span></label>
+                  <input type="tel" id="client-phone" class="form-control py-2" placeholder="e.g. 5552348901" inputmode="numeric" pattern="[0-9]*" maxlength="15" autocomplete="tel" title="Numbers only (0-9)" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="client-notes" class="form-label small fw-bold">Special Requests or Aromatherapy Preferences</label>
+                  <input type="text" id="client-notes" class="form-control py-2" placeholder="e.g. Lavender oil, lower temperature">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Booking Summary & Confirmation Action -->
+          <div class="col-lg-4">
+            <div class="card p-4 rounded-4 border-2 border-warning shadow-md sticky-top bg-white" style="top: 100px;">
+              <h5 class="font-serif fw-bold text-dark mb-3 border-bottom pb-2">
+                <i class="bi bi-receipt text-warning me-2"></i> Booking Summary
+              </h5>
+
+              <div class="mb-3">
+                <div class="small text-muted">Selected Therapy</div>
+                <h6 class="fw-bold text-dark mb-0" id="summary-service-name">Infrared Sauna Sessions</h6>
+                <span class="badge bg-light text-secondary border mt-1" id="summary-duration">45 minutes</span>
+              </div>
+
+              <div class="mb-3">
+                <div class="small text-muted">Date</div>
+                <strong class="text-dark" id="summary-date">Select a date</strong>
+              </div>
+
+              <div class="mb-3">
+                <div class="small text-muted">Time Slot</div>
+                <strong class="text-warning fs-5" id="summary-time">Select time</strong>
+              </div>
+
+              <div class="p-3 bg-light rounded-3 mb-4 border">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-muted small">Estimated Total:</span>
+                  <strong class="fs-4 text-dark font-serif" id="summary-price">$45.00</strong>
+                </div>
+                <div class="small text-muted" style="font-size: 0.76rem;">
+                  Payment is processed at reception or automatically credited against your active membership.
+                </div>
+              </div>
+
+              <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-aura-primary btn-lg" id="submit-booking-btn">
+                  <i class="bi bi-shield-check me-2"></i> Confirm Appointment
+                </button>
+              </div>
+
+              <div class="small text-muted text-center" style="font-size: 0.78rem;">
+                <i class="bi bi-info-circle me-1"></i> Free cancellation or rescheduling up to 6 hours before session time.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="aura-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="aura-brand-icon"><i class="bi bi-sun-fill"></i></span>
+            <span class="footer-brand-title mb-0">Aura &amp; Solace</span>
+          </div>
+          <p class="text-secondary small mb-3">
+            A boutique thermal wellness sanctuary dedicated to cellular rejuvenation, gentle detoxification, and sensory restoration through full-spectrum infrared saunas and medical photobiomodulation.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Pinterest" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe on YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Sanctuary</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Contrast)</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="memberships.html" class="footer-link">Memberships &amp; Pricing</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="about.html" class="footer-link">About Studio</a></li>
+            <li><a href="book.html" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Directions &amp; Hours</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Therapies</h6>
+          <ul class="list-unstyled">
+            <li><a href="services.html#infrared" class="footer-link">Infrared Sauna Cabin</a></li>
+            <li><a href="services.html#redlight" class="footer-link">Red Light Photobiomodulation</a></li>
+            <li><a href="services.html#synergy" class="footer-link">Sauna + Red Light Combo</a></li>
+            <li><a href="services.html#private" class="footer-link">VIP Sanctuary Suite</a></li>
+            <li><a href="faq.html#prep" class="footer-link">Pre-Session Protocol</a></li>
+            <li><a href="login.html" class="footer-link">Client Account Portal</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Wellness Journal</h6>
+          <p class="text-secondary small mb-3">Subscribe for evidence-conscious wellness notes, member perks, and seasonal offers.</p>
+          <form class="newsletter-form">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control" placeholder="Your email address" required autocomplete="email">
+              <button class="btn btn-aura-primary" type="submit" aria-label="Subscribe to Journal">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="footer-privacy-notice"><i class="bi bi-shield-check me-1 text-warning"></i> We respect your privacy. Unsubscribe at any time.</div>
+          </form>
+
+          <div class="mt-3 small text-secondary">
+            <div><i class="bi bi-geo-alt me-2 text-warning"></i> 960 S Westlake Blvd, Suite 100, Westlake Village, CA 91361</div>
+            <div class="mt-1"><i class="bi bi-telephone me-2 text-warning"></i> (555) 234-8901</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal & Medical Disclaimer -->
+      <div class="medical-disclaimer-box text-start">
+        <strong class="text-white">Studio Health Disclaimer:</strong> Infrared sauna and photobiomodulation therapies are designed to support general relaxation, comfort, and well-being. They are not intended to diagnose, treat, cure, or prevent any illness or disease. Individuals who are pregnant, have cardiovascular implants, or take heat-sensitive medications should consult their medical provider before use.
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>&copy; 2026 Aura &amp; Solace Wellness Studio. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="login.html" class="text-muted small">Client Portal</a>
+          <a href="login.html?admin=1" class="text-muted small">Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

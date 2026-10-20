@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura & Solace | Luxury Infrared Sauna & Detox Wellness Sanctuary</title>
+  <meta name="description" content="Experience tranquil healing and cellular detoxification at Aura & Solace. Featuring Canadian cedar infrared saunas, medical-grade red light therapy, and private sensory suites.">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme-rtl.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-xl aura-navbar sticky-top">
+    <div class="container-fluid px-xl-4 px-lg-3 px-3" style="max-width: 1440px;">
+      <a class="navbar-brand aura-brand" href="index.html">
+        <span class="aura-brand-icon">
+          <i class="bi bi-sun-fill"></i>
+        </span>
+        <span>Aura &amp; Solace</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-dark"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link aura-nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down small ms-1"></i>
+            </a>
+            <ul class="dropdown-menu aura-dropdown-menu shadow-lg border-0">
+              <li>
+                <a class="dropdown-item py-2 active fw-bold" href="index.html">
+                  <i class="bi bi-sun text-warning me-2"></i>Home 1 - Classic Sanctuary
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-2" href="home-2.html">
+                  <i class="bi bi-snow text-info me-2"></i>Home 2 - Contrast &amp; Vitality
+                  <span class="badge bg-warning text-dark ms-2" style="font-size:0.65rem;">New</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aura-nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aura-nav-link" href="memberships.html">Memberships</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aura-nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aura-nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aura-nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link aura-nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <div class="aura-nav-actions d-flex align-items-center gap-2 flex-nowrap ms-xl-3 flex-shrink-0">
+          <div class="aura-header-controls me-1">
+            <button type="button" class="btn-aura-control btn-theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark Mode" title="Toggle Dark/Light Mode">
+              <i class="bi bi-moon-stars-fill theme-icon-indicator"></i>
+            </button>
+            <button type="button" class="btn-aura-control btn-dir-toggle" id="dir-toggle-btn" aria-label="Toggle RTL/LTR" title="Switch text direction (LTR / RTL)">
+              <i class="bi bi-arrow-left-right small me-1"></i>
+              <span class="dir-pill-switch">LTR</span>
+            </button>
+          </div>
+
+          <div id="navbar-auth-container" class="d-flex align-items-center gap-2 flex-nowrap">
+            <a href="login.html" class="btn btn-aura-secondary">
+              <i class="bi bi-person"></i> Client Login
+            </a>
+            <a href="book.html" class="btn btn-aura-primary d-none d-sm-inline-flex">
+              Book a Session
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section">
+    <img src="images/hero-sauna.jpg" alt="Luxury Infrared Sauna Room with Warm Amber Glow" class="hero-background-image">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-xl-7">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(217, 119, 6, 0.2); border: 1px solid rgba(217, 119, 6, 0.4);">
+            <i class="bi bi-stars text-warning"></i>
+            <span class="font-accent fw-bold text-uppercase" style="font-size: 0.78rem; letter-spacing: 0.08em; color: #FDE68A;">
+              Canadian Cedar Infrared &amp; Red Light Sanctuary
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Deep Core Warmth. <br>
+            <span class="glow-text">Complete Renewal.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Step away from noise into serene warmth. Our full-spectrum infrared saunas and clinical red light therapy deliver soothing heat that gently warms your body from within, releasing accumulated tension and cultivating lasting vitality.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="book.html" class="btn btn-aura-primary btn-lg px-4 py-3 shadow-lg">
+              <i class="bi bi-calendar-check me-2"></i> Book a Session
+            </a>
+            <a href="services.html" class="btn btn-aura-secondary btn-lg px-4 py-3" style="background: rgba(255, 255, 255, 0.15); color: #FAF7F2 !important; border-color: rgba(255, 255, 255, 0.3);">
+              <i class="bi bi-compass me-2"></i> Explore Our Services
+            </a>
+          </div>
+
+          <!-- Studio Highlights Bar -->
+          <div class="hero-stats-bar">
+            <div class="row g-4">
+              <div class="col-6 col-md-4">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div>
+                    <div class="stat-number">Ultra-Low</div>
+                    <div class="stat-label">EMF Shielded</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-thermometer-sun"></i>
+                  </div>
+                  <div>
+                    <div class="stat-number">30° - 65°C</div>
+                    <div class="stat-label">Gentle Infrared</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                  </div>
+                  <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Private Cedar Suites</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction to Infrared & Red Light Therapy -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="images/studio-lounge.jpg" alt="Aura & Solace Relaxation Studio Lounge" class="img-fluid rounded-4 shadow-lg w-100" style="max-height: 460px; object-fit: cover;">
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-white rounded-3 shadow-md border d-flex align-items-center gap-3">
+              <div class="stat-icon bg-warning bg-opacity-10 text-warning" style="width: 48px; height: 48px;">
+                <i class="bi bi-flower1 fs-4"></i>
+              </div>
+              <div>
+                <div class="fw-bold text-dark">Holistic Self-Care</div>
+                <div class="small text-muted">Quiet, meditative suites with private showers</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <span class="section-tag">Science &amp; Serenity</span>
+          <h2 class="section-title">A Modern Sanctuary for Restorative Thermal Living</h2>
+          <p class="text-secondary mb-4">
+            Traditional steam saunas heat the ambient air up to 90°C (190°F), creating a heavy, stifling environment that can feel overwhelming. Infrared therapy operates differently: gentle electromagnetic wavelengths penetrate biological tissue directly at pleasant, soothing temperatures between 45°C and 60°C.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="p-2 rounded-circle bg-warning bg-opacity-10 text-warning mt-1">
+                <i class="bi bi-fire fs-5"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold text-dark mb-1">Full-Spectrum Infrared (Near, Mid &amp; Far)</h6>
+                <p class="small text-muted mb-0">Reaches deep tissue layers to stimulate gentle perspiration, support cellular detox pathways, and foster muscle relaxation without air stifling.</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="p-2 rounded-circle bg-danger bg-opacity-10 text-danger mt-1">
+                <i class="bi bi-brightness-high fs-5"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold text-dark mb-1">Clinical Red &amp; Near-Infrared Photobiomodulation</h6>
+                <p class="small text-muted mb-0">Targeted 660nm red and 850nm near-infrared photons stimulate mitochondrial ATP energy synthesis, encouraging collagen synthesis and tissue recovery.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-aura-secondary">
+            Learn About Our Studio Philosophy <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evidence-Conscious Wellness Benefits -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="section-tag">Targeted Benefits</span>
+        <h2 class="section-title">Nurturing Your Well-Being From Within</h2>
+        <p class="section-subtitle">
+          Our therapies are grounded in holistic relaxation research. We speak with responsibility and clinical modesty—supporting natural bodily balance without making exaggerated medical claims.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Benefit 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Deep Core Perspiration</h4>
+            <p class="text-secondary small mb-0">
+              Far-infrared waves trigger deep, purifying sweating that assists the body's natural cutaneous elimination processes, leaving skin feeling fresh, soft, and invigorated.
+            </p>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="bi bi-lightning-charge"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Muscle &amp; Joint Soothing</h4>
+            <p class="text-secondary small mb-0">
+              Gentle radiant heat increases blood circulation to muscles and ligaments, helping relieve post-workout soreness, easing joint stiffness, and accelerating physical recuperation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="bi bi-sparkles"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Skin Radiance &amp; Collagen Glow</h4>
+            <p class="text-secondary small mb-0">
+              Red light photons (660nm) penetrate superficial dermal layers to nourish fibroblasts, supporting collagen production, natural firmness, and improved tone.
+            </p>
+          </div>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="bi bi-moon-stars"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Nervous System Rest &amp; Deep Sleep</h4>
+            <p class="text-secondary small mb-0">
+              Immersing yourself in warm, peaceful cedar stimulates the parasympathetic "rest and digest" branch, reducing cortisol levels and preparing your body for restorative sleep.
+            </p>
+          </div>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="bi bi-heart-half"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Passive Cardiovascular Support</h4>
+            <p class="text-secondary small mb-0">
+              As core thermal receptors activate, heart rate gently elevates and peripheral blood flow increases, simulating the gentle cardiovascular response of moderate walking.
+            </p>
+          </div>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <i class="bi bi-cup-hot"></i>
+            </div>
+            <h4 class="h5 fw-bold mb-2">Sensory Quiet &amp; Mental Space</h4>
+            <p class="text-secondary small mb-0">
+              Each private suite offers complete solitude away from screens and alerts. Featuring chromotherapy color customization and calming acoustic sound resonance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Disclaimer Callout -->
+      <div class="medical-disclaimer-box text-start mt-4">
+        <i class="bi bi-shield-exclamation me-2 fs-5 align-middle"></i>
+        <strong>Evidence-Conscious Wellness Notice:</strong>
+        Infrared saunas and red light therapies are intended solely for general relaxation, self-care, and wellness support. They do not constitute medical treatment and are not intended to diagnose, cure, or prevent any disease. Consult your physician if you have chronic health conditions or are pregnant.
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div>
+          <span class="section-tag">Therapeutic Offerings</span>
+          <h2 class="section-title mb-0">Featured Sanctuary Services</h2>
+        </div>
+        <a href="services.html" class="btn btn-aura-secondary mt-3 mt-md-0">
+          View All Services <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="aura-service-card">
+            <div class="service-card-image-wrap">
+              <img src="images/service-infrared.jpg" alt="Infrared Sauna Session" class="service-card-image">
+              <span class="service-duration-badge">
+                <i class="bi bi-clock me-1"></i> 45 Min
+              </span>
+            </div>
+            <div class="service-card-body">
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="aura-badge badge-amber">Far-Infrared</span>
+                <span class="service-price">$45 <span>/ session</span></span>
+              </div>
+              <h4 class="h5 fw-bold mb-2">Infrared Sauna Sessions</h4>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Full-spectrum cedar cabin with chromotherapy mood lighting, custom temp controls, and acoustic sound bath resonance.
+              </p>
+              <a href="book.html?service=1" class="btn btn-aura-primary w-100">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="aura-service-card">
+            <div class="service-card-image-wrap">
+              <img src="images/service-redlight.jpg" alt="Red Light Therapy" class="service-card-image">
+              <span class="service-duration-badge">
+                <i class="bi bi-clock me-1"></i> 30 Min
+              </span>
+            </div>
+            <div class="service-card-body">
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="aura-badge badge-eucalyptus">660nm &amp; 850nm</span>
+                <span class="service-price">$35 <span>/ session</span></span>
+              </div>
+              <h4 class="h5 fw-bold mb-2">Red Light Therapy</h4>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Clinical photobiomodulation panel bath targeting mitochondrial energy recharge, collagen stimulation, and joint recovery.
+              </p>
+              <a href="book.html?service=2" class="btn btn-aura-primary w-100">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="aura-service-card">
+            <div class="service-card-image-wrap">
+              <img src="images/service-combo.jpg" alt="Sauna and Red Light Synergy Combo" class="service-card-image">
+              <span class="service-duration-badge">
+                <i class="bi bi-clock me-1"></i> 60 Min
+              </span>
+            </div>
+            <div class="service-card-body">
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="aura-badge badge-amber">Signature Duo</span>
+                <span class="service-price">$70 <span>/ package</span></span>
+              </div>
+              <h4 class="h5 fw-bold mb-2">Sauna &amp; Red Light Combo</h4>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Our signature recovery sequence: 35 min infrared sweat followed by 20 min red light rejuvenation and cold compress.
+              </p>
+              <a href="book.html?service=3" class="btn btn-aura-primary w-100">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="aura-service-card">
+            <div class="service-card-image-wrap">
+              <img src="images/service-private.jpg" alt="Private VIP Wellness Sessions" class="service-card-image">
+              <span class="service-duration-badge">
+                <i class="bi bi-clock me-1"></i> 75 Min
+              </span>
+            </div>
+            <div class="service-card-body">
+              <div class="d-flex justify-content-between align-items-baseline mb-2">
+                <span class="aura-badge badge-dark">VIP Suite</span>
+                <span class="service-price">$110 <span>/ suite</span></span>
+              </div>
+              <h4 class="h5 fw-bold mb-2">Private Wellness Sessions</h4>
+              <p class="text-muted small mb-4 flex-grow-1">
+                Exclusive sanctuary suite with dual rainfall showers, essential oil diffusing, herbal tea service, and guest privileges.
+              </p>
+              <a href="book.html?service=4" class="btn btn-aura-primary w-100">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Plans Preview -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="section-tag">Flexible Memberships</span>
+        <h2 class="section-title">Designed for Your Self-Care Rhythm</h2>
+        <p class="section-subtitle">
+          Whether you visit weekly or drop in as needed, our straightforward plans offer rollover credits, guest privileges, and exclusive perks.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Single Pass -->
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing-card">
+            <span class="aura-badge badge-amber mb-2">Drop-in Pass</span>
+            <h4 class="fw-bold mb-1">Single Session</h4>
+            <p class="text-muted small">Ideal for testing our suites</p>
+            <div class="pricing-amount">$45 <span class="pricing-period">/ pass</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle"></i> 1 Full-Spectrum Session</li>
+              <li><i class="bi bi-check2-circle"></i> Private cedar suite</li>
+              <li><i class="bi bi-check2-circle"></i> Organic towel service</li>
+              <li><i class="bi bi-check2-circle"></i> Valid for 30 days</li>
+            </ul>
+            <a href="memberships.html" class="btn btn-aura-secondary w-100 mt-auto">Choose Pass</a>
+          </div>
+        </div>
+
+        <!-- 5-Pack -->
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing-card">
+            <span class="aura-badge badge-amber mb-2">Value Package</span>
+            <h4 class="fw-bold mb-1">5-Session Pack</h4>
+            <p class="text-muted small">Save $30 on bundle pricing</p>
+            <div class="pricing-amount">$195 <span class="pricing-period">/ bundle</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle"></i> 5 Any-Service Sessions</li>
+              <li><i class="bi bi-check2-circle"></i> Shareable with a partner</li>
+              <li><i class="bi bi-check2-circle"></i> 14-day advance booking</li>
+              <li><i class="bi bi-check2-circle"></i> Valid for 90 days</li>
+            </ul>
+            <a href="memberships.html" class="btn btn-aura-secondary w-100 mt-auto">Get 5-Pack</a>
+          </div>
+        </div>
+
+        <!-- Monthly Glow -->
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing-card popular">
+            <div class="popular-ribbon">Most Popular</div>
+            <span class="aura-badge badge-amber mb-2">Monthly Routine</span>
+            <h4 class="fw-bold mb-1">Detox Glow</h4>
+            <p class="text-muted small">Weekly restorative habit</p>
+            <div class="pricing-amount text-warning">$139 <span class="pricing-period">/ month</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle text-warning"></i> 4 Sessions / Month</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> Rollover unused credits</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> 1 Free Red Light add-on</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> 15% off boutique items</li>
+              <li><i class="bi bi-check2-circle text-warning"></i> 1 Guest pass per quarter</li>
+            </ul>
+            <a href="memberships.html" class="btn btn-aura-primary w-100 mt-auto">Join Glow</a>
+          </div>
+        </div>
+
+        <!-- Unlimited VIP -->
+        <div class="col-md-6 col-lg-3">
+          <div class="pricing-card">
+            <span class="aura-badge badge-dark mb-2">Unlimited Sanctuary</span>
+            <h4 class="fw-bold mb-1">VIP Sanctuary</h4>
+            <p class="text-muted small">Daily restorative access</p>
+            <div class="pricing-amount">$249 <span class="pricing-period">/ month</span></div>
+            <ul class="pricing-features-list">
+              <li><i class="bi bi-check2-circle"></i> Unlimited Daily Access</li>
+              <li><i class="bi bi-check2-circle"></i> VIP Suite booking priority</li>
+              <li><i class="bi bi-check2-circle"></i> 2 Free Guest passes / mo</li>
+              <li><i class="bi bi-check2-circle"></i> Full acoustic resonance suite</li>
+              <li><i class="bi bi-check2-circle"></i> Pause anytime with 7d notice</li>
+            </ul>
+            <a href="memberships.html" class="btn btn-aura-secondary w-100 mt-auto">Join VIP</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="text-center max-w-xl mx-auto mb-5">
+        <span class="section-tag">Client Experiences</span>
+        <h2 class="section-title">Words from Our Sanctuary Community</h2>
+        <p class="section-subtitle">Real experiences shared by regular clients who make our cedar suites their weekly ritual.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="rating-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-secondary mb-4">
+              "As a marathon runner, the 60-minute Combo session has become indispensable for my recovery. My legs feel revived within hours, and the private rainfall shower afterwards is heavenly."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="images/practitioner-1.jpg" alt="Clara Evans" class="testimonial-avatar">
+              <div>
+                <h6 class="fw-bold mb-0 text-dark">Clara Evans</h6>
+                <span class="small text-muted">Endurance Athlete &amp; Member</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="rating-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-secondary mb-4">
+              "I work 50+ hours a week in tech and my nervous system was fried. Coming here for 45 minutes of quiet cedar warmth resets my mind completely. My sleep tracker showed my deepest sleep in months."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="images/practitioner-2.jpg" alt="Julian Reed" class="testimonial-avatar">
+              <div>
+                <h6 class="fw-bold mb-0 text-dark">Julian Reed</h6>
+                <span class="small text-muted">Software Architect</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="rating-stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-secondary mb-4">
+              "The Red Light therapy coupled with the infrared sweat transformed my skin's tone and texture. The staff is so gentle, welcoming, and knowledgeable without ever being pushy."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="images/practitioner-3.jpg" alt="Soraya K." class="testimonial-avatar">
+              <div>
+                <h6 class="fw-bold mb-0 text-dark">Soraya K.</h6>
+                <span class="small text-muted">Detox Glow Member</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Preview -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="section-tag">Common Inquiries</span>
+          <h2 class="section-title">Everything You Need to Know Before Your Visit</h2>
+          <p class="text-secondary mb-4">
+            Curious about what to wear, how our temperatures work, or how to prepare? Here are our most frequent visitor questions.
+          </p>
+          <a href="faq.html" class="btn btn-aura-secondary">
+            View All FAQs <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="accordion aura-accordion" id="homeFaqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#hfaq1" aria-expanded="true">
+                  What should I wear during an infrared sauna session?
+                </button>
+              </h2>
+              <div id="hfaq1" class="accordion-collapse collapse show" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Each session takes place inside a 100% private sanctuary suite. Most clients prefer to wear a swimsuit or simply wrap themselves in the provided organic cotton towels. Clean cotton robes and slippers are provided in your suite.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hfaq2">
+                  How hot does the infrared sauna get compared to traditional saunas?
+                </button>
+              </h2>
+              <div id="hfaq2" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  While traditional saunas reach 80°C–95°C (180°F–200°F), our infrared saunas operate at a much more comfortable 45°C–60°C (115°F–140°F). Because infrared light warms your core rather than suffocating the air, you can breathe comfortably while achieving a deeper sweat.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hfaq3">
+                  How does Red Light Therapy differ from sunlight or tanning beds?
+                </button>
+              </h2>
+              <div id="hfaq3" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Red Light Therapy utilizes specific narrow wavelengths (660nm visible red and 850nm near-infrared). It contains zero UV radiation, produces virtually no heat, and will not cause tanning or sunburn. It safely stimulates cellular energy and collagen.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hfaq4">
+                  What is your rescheduling and cancellation policy?
+                </button>
+              </h2>
+              <div id="hfaq4" class="accordion-collapse collapse" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Appointments can be easily rescheduled or cancelled directly through your Client Dashboard up to 6 hours before your appointment time at zero charge. Unused session credits are instantly returned to your balance.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Home 2 Banner -->
+  <section class="py-5" style="background: linear-gradient(135deg, rgba(217, 119, 6, 0.12) 0%, rgba(14, 165, 233, 0.12) 100%); border-top: 1px solid var(--aura-border); border-bottom: 1px solid var(--aura-border);">
+    <div class="container py-3">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="badge bg-warning text-dark font-accent fw-bold px-3 py-1 rounded-pill">Explore Alternative Experience</span>
+            <span class="badge bg-info bg-opacity-20 text-info font-accent fw-bold px-3 py-1 rounded-pill">Fire &amp; Ice</span>
+          </div>
+          <h3 class="h2 fw-bold text-dark mb-2">Experience Home 2: Contrast Therapy &amp; Bio-Hacking</h3>
+          <p class="text-secondary mb-0">
+            Featuring our interactive Wavelength Spectrum Explorer, 48°F ozone cold plunge showcase, and personalized Thermal &amp; Sweat Protocol Calculator.
+          </p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="home-2.html" class="btn btn-aura-primary btn-lg px-4 shadow">
+            Launch Home 2 Experience <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest From The Solace Journal -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5">
+        <div>
+          <span class="section-tag">Evidence &amp; Science</span>
+          <h2 class="section-title mb-0">Latest from The Solace Journal</h2>
+        </div>
+        <a href="blog.html" class="btn btn-aura-secondary mt-3 mt-md-0">
+          Visit Full Journal <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 d-flex">
+          <article class="aura-blog-card w-100 d-flex flex-column">
+            <div class="blog-card-media">
+              <a href="blog-details.html?id=1">
+                <img src="images/blog-infrared-science.jpg" alt="Far-Infrared Sauna Science" class="blog-card-img">
+              </a>
+              <span class="blog-card-badge">Infrared Science</span>
+            </div>
+            <div class="blog-card-body d-flex flex-column flex-grow-1 p-4">
+              <div class="d-flex align-items-center gap-2 text-muted small mb-2">
+                <span><i class="bi bi-calendar3 me-1"></i>Oct 14, 2026</span>
+                <span>•</span>
+                <span><i class="bi bi-clock me-1"></i>6 min read</span>
+              </div>
+              <h3 class="h5 fw-bold mb-3">
+                <a href="blog-details.html?id=1" class="blog-title-link">
+                  The Deep Science of Far-Infrared Sweat: Cellular Detoxification
+                </a>
+              </h3>
+              <p class="text-secondary small mb-4 flex-grow-1 line-clamp-3">
+                Why 55°C resonant radiant warmth mobilizes environmental toxicants without the stifling air of traditional steam rooms.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">Dr. Elena Vance</span>
+                <a href="blog-details.html?id=1" class="btn btn-sm btn-outline-warning rounded-pill px-3">Read Article</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <article class="aura-blog-card w-100 d-flex flex-column">
+            <div class="blog-card-media">
+              <a href="blog-details.html?id=2">
+                <img src="images/blog-contrast-routine.jpg" alt="Contrast Therapy Fire and Ice" class="blog-card-img">
+              </a>
+              <span class="blog-card-badge">Contrast Therapy</span>
+            </div>
+            <div class="blog-card-body d-flex flex-column flex-grow-1 p-4">
+              <div class="d-flex align-items-center gap-2 text-muted small mb-2">
+                <span><i class="bi bi-calendar3 me-1"></i>Oct 10, 2026</span>
+                <span>•</span>
+                <span><i class="bi bi-clock me-1"></i>7 min read</span>
+              </div>
+              <h3 class="h5 fw-bold mb-3">
+                <a href="blog-details.html?id=2" class="blog-title-link">
+                  Contrast Therapy (Fire &amp; Ice): How 48°F Immersion Upgrades Biology
+                </a>
+              </h3>
+              <p class="text-secondary small mb-4 flex-grow-1 line-clamp-3">
+                Alternating between infrared vasodilation and cold plunge vasoconstriction triggers a 250% sustained dopamine surge.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">Marcus Thorne</span>
+                <a href="blog-details.html?id=2" class="btn btn-sm btn-outline-warning rounded-pill px-3">Read Article</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 d-flex">
+          <article class="aura-blog-card w-100 d-flex flex-column">
+            <div class="blog-card-media">
+              <a href="blog-details.html?id=3">
+                <img src="images/blog-redlight-glow.jpg" alt="Red Light Photobiomodulation" class="blog-card-img">
+              </a>
+              <span class="blog-card-badge">Photobiomodulation</span>
+            </div>
+            <div class="blog-card-body d-flex flex-column flex-grow-1 p-4">
+              <div class="d-flex align-items-center gap-2 text-muted small mb-2">
+                <span><i class="bi bi-calendar3 me-1"></i>Oct 04, 2026</span>
+                <span>•</span>
+                <span><i class="bi bi-clock me-1"></i>5 min read</span>
+              </div>
+              <h3 class="h5 fw-bold mb-3">
+                <a href="blog-details.html?id=3" class="blog-title-link">
+                  Photobiomodulation 101: Recharging Mitochondria with Red Light
+                </a>
+              </h3>
+              <p class="text-secondary small mb-4 flex-grow-1 line-clamp-3">
+                Unlocking cellular vitality through targeted photon absorption to stimulate ATP synthesis and pro-collagen cross-linking.
+              </p>
+              <div class="d-flex align-items-center justify-content-between pt-3 border-top mt-auto">
+                <span class="small fw-semibold text-dark">Dr. Elena Vance</span>
+                <a href="blog-details.html?id=3" class="btn btn-sm btn-outline-warning rounded-pill px-3">Read Article</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Call-to-Action Section -->
+  <section class="py-5" style="background: linear-gradient(135deg, #1C1F23 0%, #121416 100%); color: #FAF7F2;">
+    <div class="container py-5 text-center">
+      <div class="max-w-xl mx-auto">
+        <span class="aura-badge badge-amber mb-3">Begin Your Wellness Ritual</span>
+        <h2 class="font-serif display-5 fw-bold text-white mb-3">
+          Ready to Sweat, Unwind, &amp; Restore?
+        </h2>
+        <p class="text-secondary fs-5 mb-4">
+          Reserve your private sanctuary suite today and experience the rejuvenating power of full-spectrum infrared and clinical red light therapy.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="book.html" class="btn btn-aura-primary btn-lg px-4 py-3 shadow-lg">
+            <i class="bi bi-calendar2-check me-2"></i> Book Your First Session
+          </a>
+          <a href="contact.html" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill">
+            <i class="bi bi-geo-alt me-2"></i> Visit Our Studio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consistent Footer -->
+  <footer class="aura-footer">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Col 1: Brand & Bio -->
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="aura-brand-icon">
+              <i class="bi bi-sun-fill"></i>
+            </span>
+            <span class="footer-brand-title mb-0">Aura &amp; Solace</span>
+          </div>
+          <p class="text-secondary small mb-3">
+            A boutique thermal wellness sanctuary dedicated to cellular rejuvenation, gentle detoxification, and sensory restoration through full-spectrum infrared saunas and medical photobiomodulation.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Follow on Pinterest" title="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Subscribe on YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Sanctuary</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home 1 (Classic)</a></li>
+            <li><a href="home-2.html" class="footer-link">Home 2 (Contrast)</a></li>
+            <li><a href="services.html" class="footer-link">All Services</a></li>
+            <li><a href="memberships.html" class="footer-link">Memberships &amp; Pricing</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="about.html" class="footer-link">About Studio</a></li>
+            <li><a href="book.html" class="footer-link">Book Appointment</a></li>
+            <li><a href="contact.html" class="footer-link">Directions &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Therapies</h6>
+          <ul class="list-unstyled">
+            <li><a href="services.html#infrared" class="footer-link">Infrared Sauna Cabin</a></li>
+            <li><a href="services.html#redlight" class="footer-link">Red Light Photobiomodulation</a></li>
+            <li><a href="services.html#synergy" class="footer-link">Sauna + Red Light Combo</a></li>
+            <li><a href="services.html#private" class="footer-link">VIP Sanctuary Suite</a></li>
+            <li><a href="faq.html#prep" class="footer-link">Pre-Session Protocol</a></li>
+            <li><a href="login.html" class="footer-link">Client Account Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Contact -->
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3 font-accent text-uppercase small" style="letter-spacing: 0.1em;">Wellness Journal</h6>
+          <p class="text-secondary small mb-3">Subscribe for evidence-conscious wellness notes, member perks, and seasonal offers.</p>
+          <form class="newsletter-form">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control" placeholder="Your email address" required autocomplete="email">
+              <button class="btn btn-aura-primary" type="submit" aria-label="Subscribe to Journal">
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="footer-privacy-notice"><i class="bi bi-shield-check me-1 text-warning"></i> We respect your privacy. Unsubscribe at any time.</div>
+          </form>
+
+          <div class="mt-3 small text-secondary">
+            <div><i class="bi bi-geo-alt me-2 text-warning"></i> 960 S Westlake Blvd, Suite 100, Westlake Village, CA 91361</div>
+            <div class="mt-1"><i class="bi bi-telephone me-2 text-warning"></i> (555) 234-8901</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal & Medical Disclaimer -->
+      <div class="medical-disclaimer-box text-start">
+        <strong class="text-white">Studio Health Disclaimer:</strong> Infrared sauna and photobiomodulation therapies are designed to support general relaxation, comfort, and well-being. They are not intended to diagnose, treat, cure, or prevent any illness or disease. Individuals who are pregnant, have cardiovascular implants, or take heat-sensitive medications should consult their medical provider before use.
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>&copy; 2026 Aura &amp; Solace Wellness Studio. All rights reserved.</div>
+        <div class="d-flex gap-3 mt-2 mt-sm-0">
+          <a href="faq.html" class="text-muted small">Privacy Policy</a>
+          <a href="faq.html" class="text-muted small">Terms of Service</a>
+          <a href="login.html?admin=1" class="text-muted small">Staff Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
